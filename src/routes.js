@@ -1,13 +1,16 @@
 import React from 'react';
-import { Router, Route } from 'react-router';
+import { Router, Route, IndexRoute } from 'react-router';
 
 import App from './components/App';
 import Login from './components/Login';
 
 const Routes = (props) => (
   <Router {...props}>
-    <Route path="/music_master" component={App} />
-    <Route path="/" component={Login} />
+    <Route path="/" component={Login} >
+      <IndexRoute component={App} />
+      <Route path="/user/:accessToken/:refreshToken" component={User} />
+      <Route path="/error/:errorMsg" component={Error} />
+    </Route>
   </Router>
 );
 

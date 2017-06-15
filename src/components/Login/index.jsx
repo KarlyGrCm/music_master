@@ -12,7 +12,7 @@ export default class Login extends Component {
       <div className={classnames('Login', className)} {...props}>
         <div id="login">
           <h1>First, log in to spotify</h1>
-          <a href="/login">Log in</a>
+          <a onClick="">Log in</a>
           </div>
           <div id="loggedin">
           </div>      
